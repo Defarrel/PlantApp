@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/constant.dart';
-
+import 'package:plantapp/screens/details/detail_screen.dart';
 
 class RecomendsPlants extends StatelessWidget {
-  const RecomendsPlants({
-    super.key,
-  });
+  const RecomendsPlants({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +16,36 @@ class RecomendsPlants extends StatelessWidget {
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailScreen()),
+              );
+            },
           ),
           RecomendPlantCard(
             image: 'assets/images/image_2.png',
             title: "Angelica",
             country: "Russia",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailScreen()),
+              );
+            },
           ),
           RecomendPlantCard(
             image: 'assets/images/image_3.png',
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailScreen()),
+              );
+            },
           ),
         ],
       ),
