@@ -15,8 +15,40 @@ class Body extends StatelessWidget {
         children: <Widget>[
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recommended", press: () {}),
+          RecomendsPlants(),
+        ],
+      ),
+    );
+  }
+}
+
+class RecomendsPlants extends StatelessWidget {
+  const RecomendsPlants({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
           RecomendPlantCard(
             image: 'assets/images/image_1.png',
+            title: "Samantha",
+            country: "Russia",
+            price: 440,
+            press: () {},
+          ),
+          RecomendPlantCard(
+            image: 'assets/images/image_2.png',
+            title: "Angelica",
+            country: "Russia",
+            price: 440,
+            press: () {},
+          ),
+          RecomendPlantCard(
+            image: 'assets/images/image_3.png',
             title: "Samantha",
             country: "Russia",
             price: 440,
@@ -46,6 +78,11 @@ class RecomendPlantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      margin: EdgeInsets.only(
+        left: kDefaultPadding,
+        top: kDefaultPadding / 2,
+        bottom: kDefaultPadding * 2.5,
+      ),
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
