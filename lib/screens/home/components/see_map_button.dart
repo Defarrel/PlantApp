@@ -25,12 +25,13 @@ class OrderButton extends StatelessWidget {
               ),
             ),
             onPressed: press,
-            child: const Text("See Map", style: TextStyle(color: Colors.white)),
+            child: const Text("Chose Address", style: TextStyle(color: Colors.white)),
           ),
         ),
         alamatDipilih == null
             ? const Text('Tidak ada alamat yang dipilih')
             : Text(alamatDipilih!),
+        SizedBox(height: kDefaultPadding),
       ],
     );
   }
