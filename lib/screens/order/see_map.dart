@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/screens/order/components/body.dart';
 
-class OrderScreen extends StatelessWidget {
-  const OrderScreen({super.key});
+class SeeMap extends StatelessWidget {
+  const SeeMap({super.key});
 
   @override
   Widget build(BuildContext context) {
