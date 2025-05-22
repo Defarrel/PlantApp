@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantapp/constant.dart';
+import 'package:plantapp/screens/details/detail_screen.dart';
 import 'package:plantapp/screens/home/components/featured_plants.dart';
 import 'package:plantapp/screens/home/components/header_with_searchbox.dart';
+import 'package:plantapp/screens/home/components/order_button.dart';
 import 'package:plantapp/screens/home/components/recomend_plants.dart';
 import 'package:plantapp/screens/home/components/title_with_more_btn.dart';
+import 'package:plantapp/screens/order/order_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -21,6 +24,14 @@ class Body extends StatelessWidget {
           TitleWithMoreBtn(title: "Featured Plants", press: () {}),
           FeaturedPlants(),
           SizedBox(height: kDefaultPadding),
+          OrderButton(
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => OrderScreen()),
+              );
+            },
+          ),
         ],
       ),
     );
